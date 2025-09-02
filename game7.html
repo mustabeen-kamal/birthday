@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Riddle</title>
+  <link rel="stylesheet" href="game1Style.css">
+        <style>
+    body{
+      background-color: #8ba9a1;
+    }
+    .options button {
+      background-color: #bce3da;
+    }
+    .options button:hover {
+    background-color: #779790
+
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>"You've made it to the final riddle... Just one last step before the surprise!"</h1>
+  </div>
+  <div class="bord">
+
+
+  <div class="riddle-box">
+      <p class="riddle-text">
+    
+"I brighten the dark without a flame,
+I twinkle softly and call out my name.
+
+    </p>
+
+    <div class="options">
+      <button onclick="checkAnswer(this)">Ice</button>
+      <button onclick="checkAnswer(this)">fire </button>
+      <button onclick="checkAnswer(this)">Dust </button>
+      <button onclick="checkAnswer(this)">Sparkle </button>
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+
+    <a href="game8.html"><button id="nextBtn" style="display:none; margin-top: 20px;">NEXT</button></a> 
+
+  </div>
+  </div>
+
+  <script>
+    function checkAnswer(button) {
+  const answer = button.textContent.trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (answer === "sparkle") {
+    feedback.textContent = "Just like I hoped—you got it! Go to gift number 6";
+    feedback.style.color = "#28a745";
+    nextBtn.style.display = "inline-block"; // إظهار زر NEXT
+  } else {
+    feedback.textContent = "❌ Try again!";
+    feedback.style.color = "#dc3545";
+    nextBtn.style.display = "none"; // إخفاؤه إذا كانت الإجابة خاطئة
+  }
+}
+
+  </script>
+
+</body>
+</html>

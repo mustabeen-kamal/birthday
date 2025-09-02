@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Riddle</title>
+  <link rel="stylesheet" href="game1Style.css">
+    <style>
+    body{
+      background-color: #F5E0D3;
+    }
+    .options button {
+      background-color: #D9A88B;
+    }
+    .options button:hover {
+    background-color: #b58f79;
+
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div>
+
+    <h1>Every Gift Has a Story—Here’s Where It Begins</h1>
+  </div>
+  <div class="bord">
+   <pre>A Little Riddle to Start the Magic</pre>
+
+  <div class="riddle-box">
+    <p class="riddle-text">
+      
+"I'm round and sweet, sometimes with chips,
+You dunk me in milk for tasty sips.
+What am I?
+    </p>
+
+    <div class="options">
+      <button onclick="checkAnswer(this)">Cookies</button>
+      <button onclick="checkAnswer(this)">Cake</button>
+      <button onclick="checkAnswer(this)">Brownies</button>
+      <button onclick="checkAnswer(this)">Chocolate Bar</button>
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+
+    <a href="game2.html"><button id="nextBtn" style="display:none; margin-top: 20px;">NEXT</button></a> 
+
+  </div>
+  </div>
+
+  <script>
+    function checkAnswer(button) {
+  const answer = button.textContent.trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (answer === "cookies") {
+    feedback.textContent = "Well done! Open gift number 1";
+    feedback.style.color = "#28a745";
+    nextBtn.style.display = "inline-block"; // إظهار زر NEXT
+  } else {
+    feedback.textContent = "❌ Try again!";
+    feedback.style.color = "#dc3545";
+    nextBtn.style.display = "none"; // إخفاؤه إذا كانت الإجابة خاطئة
+  }
+}
+
+  </script>
+
+</body>
+</html>

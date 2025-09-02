@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="indexStyle.css" />
+</head>
+<body>
+  <div>
+    <audio id="birthdaySong" controls hidden src="Happy_birthday_to_you_MIDI(chosic.com).mp3" type="audio/mpeg"></audio>
+  </div>
+
+  <div class="container" id="container">
+    <button id="birthdayBtn">START</button>
+
+    <div class="cake" id="cake">
+      <div class="frosting"></div>
+      <div class="face">
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="smile"></div>
+      </div>
+      <div class="sprinkles"></div>
+      <div class="candles">
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+      </div>
+      <p class="happy-text" id="happyText">Happy Birthday</p>
+    </div>
+    
+    <a href="game1.html"><button id="gameBtn">GAME ON?</button></a>
+  </div>
+
+  <div class="fireworks-container" id="fireworksContainer"></div>
+  <div class="balloon-container" id="balloonContainer"></div>
+
+  <script src="indexJS.js"></script>
+</body>
+</html>

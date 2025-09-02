@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Riddle</title>
+  <link rel="stylesheet" href="game1Style.css">
+      <style>
+    body{
+      background-color: #eaa6cb;
+    }
+    .options button {
+      background-color: #e686bb;
+    }
+    .options button:hover {
+    background-color: rgb(226, 97, 188)
+
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>One more step toward the sweetest surprise</h1>
+  </div>
+  <div class="bord">
+
+  <div class="riddle-box">
+      <p class="riddle-text">
+      I freeze a smile in just one frame,<br>
+      To keep a memory and a name.<br>
+      What am I?<br>
+    </p>
+
+    <div class="options">
+      <button onclick="checkAnswer(this)">Photo </button>
+      <button onclick="checkAnswer(this)">Letter </button>
+      <button onclick="checkAnswer(this)">Canvas </button>
+      <button onclick="checkAnswer(this)">Mirror</button>
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+
+    <a href="game7.html"><button id="nextBtn" style="display:none; margin-top: 20px;">NEXT</button></a> 
+
+  </div>
+  </div>
+
+  <script>
+    function checkAnswer(button) {
+  const answer = button.textContent.trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (answer === "photo") {
+    feedback.textContent = "You're on fire! 🔥Go and open gift number 5";
+    feedback.style.color = "#28a745";
+    nextBtn.style.display = "inline-block"; // إظهار زر NEXT
+  } else {
+    feedback.textContent = "❌ Try again!";
+    feedback.style.color = "#dc3545";
+    nextBtn.style.display = "none"; // إخفاؤه إذا كانت الإجابة خاطئة
+  }
+}
+
+  </script>
+
+</body>
+</html>

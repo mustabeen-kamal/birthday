@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Riddle</title>
+  <link rel="stylesheet" href="game1Style.css">
+        <style>
+    body{
+      background-color: #E6D6FA;
+    }
+    .options button {
+      background-color: #CDA3E6;
+    }
+    .options button:hover {
+    background-color: #b16dd9;
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <div>
+    <h1>Almost there! Every click brings you closer to wonder</h1>
+  </div>
+  <div class="bord">
+
+  <div class="riddle-box">
+      <p class="riddle-text">
+      When feelings are loud but your lips stay still,<br>
+      I hold your secrets, your dreams, your will.<br>
+      You write in me what you can't say—<br>
+      What do I hold at the end of the day?<br>
+    </p>
+
+    <div class="options">
+      <button onclick="checkAnswer(this)">Words </button>
+      <button onclick="checkAnswer(this)">Pens </button>
+      <button onclick="checkAnswer(this)">Feelings </button>
+      <button onclick="checkAnswer(this)">Pages</button>
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+
+    <a href="game6.html"><button id="nextBtn" style="display:none; margin-top: 20px;">NEXT</button></a> 
+
+  </div>
+  </div>
+
+  <script>
+    function checkAnswer(button) {
+  const answer = button.textContent.trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (answer === "words") {
+    feedback.textContent = "Exactly! Like I knew you would let's open gift number 4";
+    feedback.style.color = "#28a745";
+    nextBtn.style.display = "inline-block"; // إظهار زر NEXT
+  } else {
+    feedback.textContent = "❌ Try again!";
+    feedback.style.color = "#dc3545";
+    nextBtn.style.display = "none"; // إخفاؤه إذا كانت الإجابة خاطئة
+  }
+}
+
+  </script>
+
+</body>
+</html>
